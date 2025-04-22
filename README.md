@@ -74,14 +74,6 @@ SmartBottomNav(
 
 ![Screenshot 2025-04-22 152617](https://github.com/user-attachments/assets/39827e33-08b9-49cd-8f35-0f02c924713d)
 
-
-*Default and customized styles with badge support*
-
-### How to add your screenshot:
-
-1. **Add image file** to your project:
-## 🔧 Advanced Features
-
 ### Add Badges
 ```dart
 SmartNavItem(
@@ -96,6 +88,8 @@ SmartNavItem(
 ## 🤝 Contributing
 
 Contributions are welcome! Please open an issue or PR on [GitHub](https://github.com/Halawany1/smart_nav_bar).
+
+Halawany w yala bena
 
 ## 📜 License
 
