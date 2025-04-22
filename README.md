@@ -72,7 +72,7 @@ SmartBottomNav(
 ```
 ## 📱 Screenshot
 
-![Screenshot 2025-04-22 152617](https://github.com/user-attachments/assets/39827e33-08b9-49cd-8f35-0f02c924713d)
+![22 04 2025_16 27 37_REC-ezgif com-effects](https://github.com/user-attachments/assets/88d538a8-65fc-492b-a83e-0f84c64259b6)
 
 ### Add Badges
 ```dart
