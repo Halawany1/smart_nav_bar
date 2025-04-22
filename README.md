@@ -79,7 +79,8 @@ SmartNavBar(
 
 ## 📱 Screenshot
 
-<img src="c:\Users\pc\Downloads\Screenshot 2025-04-22 132808.png" width="300" alt="Smart Nav Bar Demo">
+![Screenshot 2025-04-22 132808](https://github.com/user-attachments/assets/8aa5541e-9964-4ced-b3ac-7ec16270ec3a)
+
 
 *Default and customized styles with badge support*
 
