@@ -3,14 +3,28 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:smart_nav_bar/models/badge.dart';
 import 'package:smart_nav_bar/smart_nav_bar.dart';
 
+/// A custom bottom navigation bar widget that supports optional page view integration,
+/// animated icon scaling, and notification badges.
 class SmartBottomNav extends StatelessWidget {
+  /// The currently selected index.
   final int currentIndex;
+
+  /// List of navigation items to display.
   final List<SmartNavItem> items;
+
+  /// Callback function triggered when a navigation item is tapped.
   final ValueChanged<int> onTap;
+
+  /// Defines the visual style of the navigation bar.
   final SmartNavStyle style;
+
+  /// Whether to use this navigation bar with internal screen navigation using [PageView].
   final bool withScreens;
+
+  /// A [PageController] to control the [PageView] if [withScreens] is true.
   final PageController? pageController;
 
+  /// Creates a customizable and animated bottom navigation bar.
   const SmartBottomNav({
     super.key,
     required this.currentIndex,
@@ -40,6 +54,7 @@ class SmartBottomNav extends StatelessWidget {
     );
   }
 
+  /// Builds the navigation bar container with background, border, and shadow styles.
   Widget _buildBottomNavBar() {
     return Container(
       margin: style.margin,
@@ -53,7 +68,7 @@ class SmartBottomNav extends StatelessWidget {
         boxShadow: [
           if (style.borderColor == null)
             BoxShadow(
-              color: Colors.black.withValues(alpha: 0.1),
+              color: Colors.black.withAlpha(25),
               blurRadius: 10,
               offset: const Offset(0, -5),
             ),
@@ -70,6 +85,7 @@ class SmartBottomNav extends StatelessWidget {
     );
   }
 
+  /// Builds a single navigation item with icon, label, and optional badge.
   Widget _buildNavItem(int index, SmartNavItem item) {
     final isActive = index == currentIndex;
     final activeColor = item.activeColor ?? style.defaultActiveColor;
@@ -147,12 +163,10 @@ class SmartBottomNav extends StatelessWidget {
                 Text(
                   item.label,
                   style: (isActive
-                      ? style.defaultActiveTextStyle.copyWith(
-                          color: activeColor,
-                        )
-                      : style.defaultInactiveTextStyle.copyWith(
-                          color: inactiveColor,
-                        )),
+                      ? style.defaultActiveTextStyle
+                          .copyWith(color: activeColor)
+                      : style.defaultInactiveTextStyle
+                          .copyWith(color: inactiveColor)),
                 ),
               ],
             ],
@@ -162,6 +176,7 @@ class SmartBottomNav extends StatelessWidget {
     );
   }
 
+  /// Determines whether a badge should be displayed based on its content and settings.
   bool _shouldShowBadge(BadgeNavItem badge) {
     if (badge.hideWhenZero && badge.count == 0) return false;
     if (badge.text == null && badge.count == null) return false;

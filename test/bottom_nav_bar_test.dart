@@ -23,15 +23,13 @@ void main() {
 
   testWidgets('CustomBottomNavBar applies correct styling',
       (WidgetTester tester) async {
-    const testColor = Colors.red;
-
     await tester.pumpWidget(
       buildTestableWidget(
         SmartBottomNav(
           currentIndex: 0,
           items: mockNavItems,
           onTap: (index) {},
-          style: const SmartNavStyle(activeColor: testColor),
+          style: const SmartNavStyle(),
         ),
       ),
     );
