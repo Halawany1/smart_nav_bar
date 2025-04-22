@@ -1,10 +1,6 @@
 # Changelog
 
-## 1.0.0
+## 1.0.1 - 2025-4-22
 
-Initial release of the Custom Bottom Navigation Bar package with:
-- Customizable bottom navigation bar
-- Smooth animation effects
-- Flexible styling options
-- SVG icon support
-- Easy integration
+### Changed
+- Updated readme file
