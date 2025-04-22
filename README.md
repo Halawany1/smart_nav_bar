@@ -29,7 +29,7 @@ Add to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  smart_nav_bar: ^1.0.4
+  smart_nav_bar: ^1.0.4+3
 ```
 
 Then run:

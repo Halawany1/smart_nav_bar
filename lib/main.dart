@@ -19,7 +19,10 @@ class _MyAppState extends State<MyApp> {
     SmartNavItem(iconPath: 'assets/home_icon.svg', label: 'Home'),
     SmartNavItem(iconPath: 'assets/request_icon.svg', label: 'Request'),
     SmartNavItem(iconPath: 'assets/returns_icon.svg', label: 'Returns'),
-    SmartNavItem(iconPath: 'assets/profile_icon.svg', label: 'Profile',badge: BadgeNavItem(count: 3)),
+    SmartNavItem(
+        iconPath: 'assets/profile_icon.svg',
+        label: 'Profile',
+        badge: BadgeNavItem(count: 3)),
   ];
 
   @override
