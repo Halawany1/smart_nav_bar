@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:smart_nav_bar/bottom_nav_bar.dart';
-import 'package:smart_nav_bar/bottom_nav_item.dart';
-import 'package:smart_nav_bar/models/style_config.dart';
+import 'package:smart_nav_bar/smart_bottom_nav.dart';
+import 'package:smart_nav_bar/smart_bottom_nav_item.dart';
+import 'package:smart_nav_bar/models/nav_style.dart';
 import 'widget_test_helpers.dart';
 
 void main() {
@@ -10,7 +10,7 @@ void main() {
       (WidgetTester tester) async {
     await tester.pumpWidget(
       buildTestableWidget(
-        CustomBottomNavBar(
+        SmartBottomNav(
           currentIndex: 0,
           items: mockNavItems,
           onTap: (index) {},
@@ -18,7 +18,7 @@ void main() {
       ),
     );
 
-    expect(find.byType(BottomNavItem), findsNWidgets(mockNavItems.length));
+    expect(find.byType(SmartNavBarItem), findsNWidgets(mockNavItems.length));
   });
 
   testWidgets('CustomBottomNavBar applies correct styling',
@@ -27,11 +27,11 @@ void main() {
 
     await tester.pumpWidget(
       buildTestableWidget(
-        CustomBottomNavBar(
+        SmartBottomNav(
           currentIndex: 0,
           items: mockNavItems,
           onTap: (index) {},
-          style: const BottomNavBarStyle(activeColor: testColor),
+          style: const SmartNavStyle(activeColor: testColor),
         ),
       ),
     );

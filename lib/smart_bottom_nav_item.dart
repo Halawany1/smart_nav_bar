@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class BottomNavItem extends StatelessWidget {
+class SmartNavBarItem extends StatelessWidget {
   final int index;
   final int currentIndex;
   final String iconPath;
@@ -14,7 +14,7 @@ class BottomNavItem extends StatelessWidget {
   final double iconSize;
   final double scaleFactor;
 
-  const BottomNavItem({
+  const SmartNavBarItem({
     super.key,
     required this.index,
     required this.currentIndex,

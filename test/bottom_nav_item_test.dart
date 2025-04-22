@@ -1,6 +1,6 @@
 import 'package:flutter_svg/svg.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:smart_nav_bar/bottom_nav_item.dart';
+import 'package:smart_nav_bar/smart_bottom_nav_item.dart';
 
 import 'widget_test_helpers.dart';
 
@@ -8,7 +8,7 @@ void main() {
   testWidgets('BottomNavItem renders correctly', (WidgetTester tester) async {
     await tester.pumpWidget(
       buildTestableWidget(
-        BottomNavItem(
+        SmartNavBarItem(
           index: 0,
           currentIndex: 0,
           iconPath: 'icon1.svg',
@@ -28,7 +28,7 @@ void main() {
 
     await tester.pumpWidget(
       buildTestableWidget(
-        BottomNavItem(
+        SmartNavBarItem(
           index: 1,
           currentIndex: 0,
           iconPath: 'icon1.svg',

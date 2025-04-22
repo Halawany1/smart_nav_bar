@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:smart_nav_bar/models/nav_item_model.dart';
+import 'package:smart_nav_bar/models/nav_item.dart';
 
-List<NavItemModel> mockNavItems = [
-  const NavItemModel(iconPath: 'icon1.svg', label: 'Home'),
-  const NavItemModel(iconPath: 'icon2.svg', label: 'Search'),
+List<SmartNavItem> mockNavItems = [
+  const SmartNavItem(iconPath: 'icon1.svg', label: 'Home'),
+  const SmartNavItem(iconPath: 'icon2.svg', label: 'Search'),
 ];
 
 Widget buildTestableWidget(Widget widget) {

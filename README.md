@@ -3,21 +3,25 @@
 [![Pub Version](https://img.shields.io/pub/v/smart_nav_bar)](https://pub.dev/packages/smart_nav_bar)
 [![License: MIT](https://img.shields.io/badge/license-MIT-purple.svg)](https://opensource.org/licenses/MIT)
 
-A beautifully animated and highly customizable bottom navigation bar for Flutter applications with smooth animations and flexible styling options.
+A beautifully animated and highly customizable bottom navigation bar for Flutter applications with smooth animations, badge support, and flexible screen integration.
 
+---
 
 ## ✨ Features
 
-- **Smooth Animations**: Elegant scaling and color transitions
-- **Full Customization**: 
-  - Colors (active/inactive states)
-  - Icon sizes
-  - Animation curves
-  - Corner radius
-  - Padding/margins
-- **SVG Support**: Vector icons out of the box
-- **Flexible Configuration**: Adapts to any design system
-- **Lightweight**: No unnecessary dependencies
+- 🎯 **Smooth Animations** – Scaling effects and color transitions for a polished feel
+- 🎨 **Customizable Design**
+  - Active/inactive colors
+  - Icon sizes and scale factor
+  - Margins and paddings
+  - Background color, border, and shadow
+  - Optional labels with custom styles
+- 📦 **Screen Support** – Integrate directly with `PageView` for tabbed navigation
+- 🛎 **Badge Support** – Show notification counts or indicators on icons
+- 🖼 **SVG Icon Support** – Use `.svg` icons with color filtering
+- 📱 **Responsive Layout** – Works across various screen sizes and orientations
+
+---
 
 ## 🚀 Installation
 
@@ -25,7 +29,7 @@ Add to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  smart_nav_bar: ^1.0.1
+  smart_nav_bar: ^1.0.2
 ```
 
 Then run:
@@ -38,45 +42,34 @@ flutter pub get
 ```dart
 import 'package:smart_nav_bar/smart_nav_bar.dart';
 
-SmartNavBar(
+SmartBottomNav(
   currentIndex: _currentIndex,
-  items: const [
-    NavItem(iconPath: 'assets/home.svg', label: 'Home'),
-    NavItem(iconPath: 'assets/search.svg', label: 'Search'),
-    NavItem(iconPath: 'assets/profile.svg', label: 'Profile'),
+  items: [
+    SmartNavItem(iconPath: 'assets/home.svg', label: 'Home'),
+    SmartNavItem(iconPath: 'assets/search.svg', label: 'Search'),
+    SmartNavItem(iconPath: 'assets/profile.svg', label: 'Profile'),
   ],
-  onTap: (index) => setState(() => _currentIndex = index),
+  onTap: (index) {
+    setState(() => _currentIndex = index);
+  },
 )
+
 ```
 
 ## 🎨 Customization
 
 ### Basic Styling
 ```dart
-SmartNavBar(
-  style: SmartNavBarStyle(
-    activeColor: Colors.blue,
-    inactiveColor: Colors.grey,
+SmartBottomNav(
+  style: SmartNavStyle(
+    defaultActiveColor: Colors.blue,
+    defaultInactiveColor: Colors.grey,
     backgroundColor: Colors.white,
     borderRadius: 20,
     padding: EdgeInsets.all(12),
   // ...
 )
 ```
-
-### Advanced Options
-```dart
-SmartNavBar(
-  animationConfig: AnimationConfig(
-    curve: Curves.easeOutQuad,
-    duration: Duration(milliseconds: 300),
-  itemConfig: ItemConfig(
-    iconSize: 24,
-    labelStyle: TextStyle(fontWeight: FontWeight.w600)),
-  // ...
-)
-```
-
 ## 📱 Screenshot
 
 <img src="c:\Users\pc\Downloads\Screenshot 2025-04-22 132808.png" width="300" alt="Smart Nav Bar Demo">
@@ -90,30 +83,18 @@ SmartNavBar(
 
 ### Add Badges
 ```dart
-NavItem(
+SmartNavItem(
   iconPath: 'assets/notifications.svg',
-  label: 'Alerts',  
-  badge: BadgeConfig(
-    count: 3,
-    color: Colors.red,
-  ),
+  label: 'Alerts',
+  badge: BadgeNavItem(count: 3)
 )
+
 ```
 
-### Custom Screen Builder
-```dart
-SmartNavBar.withScreens(
-  currentIndex: _currentIndex,
-  items: [
-    NavItem(..., screen: HomeScreen()),
-    NavItem(..., screen: SearchScreen()),
-  ],
-)
-```
 
 ## 🤝 Contributing
 
-Contributions are welcome! Please open an issue or PR on [GitHub](https://github.com/yourusername/smart_nav_bar).
+Contributions are welcome! Please open an issue or PR on [GitHub](https://github.com/Halawany1/smart_nav_bar).
 
 ## 📜 License
 
