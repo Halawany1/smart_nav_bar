@@ -72,7 +72,7 @@ SmartBottomNav(
 ```
 ## 📱 Screenshot
 
-![Screenshot 2025-04-22 132808](https://github.com/user-attachments/assets/8aa5541e-9964-4ced-b3ac-7ec16270ec3a)
+![Screenshot 2025-04-22 152617](https://github.com/user-attachments/assets/39827e33-08b9-49cd-8f35-0f02c924713d)
 
 
 *Default and customized styles with badge support*
