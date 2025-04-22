@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:custom_bottom_nav_bar/custom_bottom_nav_bar.dart';
 
-void main() {
-  runApp(const MyApp());
-}
+void main() => runApp(const MyApp());
 
 class MyApp extends StatefulWidget {
   const MyApp({super.key});
@@ -15,39 +13,23 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   int _currentIndex = 0;
 
-  final List<NavItemModel> _navItems = [
-    NavItemModel(
-      iconPath: 'assets/icons/home.svg',
-      label: 'Home',
-    ),
-    NavItemModel(
-      iconPath: 'assets/icons/search.svg',
-      label: 'Search',
-    ),
-    NavItemModel(
-      iconPath: 'assets/icons/favorites.svg',
-      label: 'Favorites',
-    ),
-    NavItemModel(
-      iconPath: 'assets/icons/profile.svg',
-      label: 'Profile',
-    ),
+  final List<NavItemModel> _items = const [
+    NavItemModel(iconPath: 'assets/home_icon.svg', label: 'Home'),
+    NavItemModel(iconPath: 'assets/request_icon.svg', label: 'Request'),
+    NavItemModel(iconPath: 'assets/returns_icon.svg', label: 'Returns'),
+    NavItemModel(iconPath: 'assets/profile_icon.svg', label: 'Profile'),
   ];
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        body: Center(child: Text('Page $_currentIndex')),
+        appBar: AppBar(title: const Text('Custom Nav Bar Demo')),
+        body: Center(child: Text('Page ${_currentIndex + 1}')),
         bottomNavigationBar: CustomBottomNavBar(
           currentIndex: _currentIndex,
-          items: _navItems,
+          items: _items,
           onTap: (index) => setState(() => _currentIndex = index),
-          style: BottomNavBarStyle(
-            activeColor: Colors.blue,
-            inactiveColor: Colors.grey,
-            backgroundColor: Colors.white.withOpacity(0.9),
-          ),
         ),
       ),
     );

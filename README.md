@@ -1,16 +1,18 @@
-# bottom_nav_bar_package
+# Custom Bottom Navigation Bar
 
-A new Flutter project.
+A beautifully animated and customizable bottom navigation bar for Flutter applications.
 
-## Getting Started
+## Features
 
-This project is a starting point for a Flutter application.
+- Smooth scaling animations
+- Fully customizable colors and styles
+- SVG icon support
+- Flexible configuration options
+- Easy integration
 
-A few resources to get you started if this is your first Flutter project:
+## Installation
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Add to your `pubspec.yaml`:
+```yaml
+dependencies:
+  custom_bottom_nav_bar: ^1.0.0
