@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:custom_bottom_nav_bar/custom_bottom_nav_bar.dart';
+import 'package:smart_nav_bar/bottom_nav_bar.dart';
+import 'package:smart_nav_bar/models/nav_item_model.dart';
 
 void main() => runApp(const MyApp());
 

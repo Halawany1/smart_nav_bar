@@ -1,6 +1,6 @@
-import 'package:custom_bottom_nav_bar/bottom_nav_item.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:smart_nav_bar/bottom_nav_item.dart';
 
 import 'widget_test_helpers.dart';
 

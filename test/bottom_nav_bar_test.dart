@@ -1,8 +1,8 @@
-import 'package:custom_bottom_nav_bar/bottom_nav_item.dart';
-import 'package:custom_bottom_nav_bar/models/style_config.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:custom_bottom_nav_bar/bottom_nav_bar.dart';
+import 'package:smart_nav_bar/bottom_nav_bar.dart';
+import 'package:smart_nav_bar/bottom_nav_item.dart';
+import 'package:smart_nav_bar/models/style_config.dart';
 import 'widget_test_helpers.dart';
 
 void main() {
