@@ -4,4 +4,6 @@
 
 ### Changed
 - Updated readme file
-- add example
+- add new styles to bottom nav bar 
+- can to change on any style now with copyWith
+- label become optional 

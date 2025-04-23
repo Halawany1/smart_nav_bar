@@ -7,7 +7,7 @@ class SmartNavItem {
   final String iconPath;
 
   /// The label text shown below or beside the icon.
-  final String label;
+  final String? label;
 
   /// The screen (widget) to be displayed when this item is selected.
   final Widget? screen;
@@ -29,7 +29,7 @@ class SmartNavItem {
   /// [iconPath] and [label] are required.
   const SmartNavItem({
     required this.iconPath,
-    required this.label,
+    this.label,
     this.screen,
     this.activeColor,
     this.inactiveColor,

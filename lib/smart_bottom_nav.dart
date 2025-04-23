@@ -158,10 +158,10 @@ class SmartBottomNav extends StatelessWidget {
                     ),
                 ],
               ),
-              if (style.showLabel) ...[
+              if (item.label != null && style.showLabel) ...[
                 const SizedBox(height: 4),
                 Text(
-                  item.label,
+                  item.label!,
                   style: (isActive
                       ? style.defaultActiveTextStyle
                           .copyWith(color: activeColor)

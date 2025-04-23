@@ -3,39 +3,58 @@
 [![Pub Version](https://img.shields.io/pub/v/smart_nav_bar)](https://pub.dev/packages/smart_nav_bar)
 [![License: MIT](https://img.shields.io/badge/license-MIT-purple.svg)](https://opensource.org/licenses/MIT)
 
-A beautifully animated and highly customizable bottom navigation bar for Flutter applications with smooth animations, badge support, and flexible screen integration.
-
----
+A beautifully animated and highly customizable bottom navigation bar for Flutter applications.
 
 ## ✨ Features
 
-- 🎯 **Smooth Animations** – Scaling effects and color transitions for a polished feel
-- 🎨 **Customizable Design**
-  - Active/inactive colors
-  - Icon sizes and scale factor
-  - Margins and paddings
-  - Background color, border, and shadow
-  - Optional labels with custom styles
-- 📦 **Screen Support** – Integrate directly with `PageView` for tabbed navigation
-- 🛎 **Badge Support** – Show notification counts or indicators on icons
-- 🖼 **SVG Icon Support** – Use `.svg` icons with color filtering
-- 📱 **Responsive Layout** – Works across various screen sizes and orientations
-
----
+- 🎯 Smooth animations with scaling effects
+- 🎨 5+ predefined styles + full customization
+- 📦 Direct PageView integration
+- 🛎 Badge support with counters
+- 🖼 SVG icon support
+- 📱 Fully responsive layout
 
 ## 🚀 Installation
 
-Add to your `pubspec.yaml`:
-
 ```yaml
 dependencies:
-  smart_nav_bar: ^1.0.4+3
-```
+  smart_nav_bar: ^1.0.4+4
+
 
 Then run:
 ```bash
 flutter pub get
 ```
+
+
+### 1. Default Style
+Perfect for standard applications with clean aesthetics.
+
+<img src="https://i.imgur.com/default_style.png" width="300" alt="Default Style Preview">
+
+```dart
+SmartBottomNav(
+  style:  style: SmartNavStyle(
+    defaultActiveColor: Colors.blue,
+    defaultInactiveColor: Colors.grey,
+    backgroundColor: Colors.white,
+    borderRadius: 20,
+    padding: EdgeInsets.all(12),
+  // ..., 
+  )
+)
+
+### 1. Neon Style
+Vibrant neon colors with elastic animations.
+
+<img src="https://i.imgur.com/default_style.png" width="300" alt="Default Style Preview">
+
+```dart
+SmartBottomNav(
+  style: SmartNavStyle.neonStyle,
+  // ...
+)
+
 
 ## 🛠 Basic Usage
 
@@ -56,23 +75,6 @@ SmartBottomNav(
 
 ```
 
-## 🎨 Customization
-
-### Basic Styling
-```dart
-SmartBottomNav(
-  style: SmartNavStyle(
-    defaultActiveColor: Colors.blue,
-    defaultInactiveColor: Colors.grey,
-    backgroundColor: Colors.white,
-    borderRadius: 20,
-    padding: EdgeInsets.all(12),
-  // ...
-)
-```
-## 📱 Screenshot
-
-![22 04 2025_16 27 37_REC-ezgif com-effects](https://github.com/user-attachments/assets/88d538a8-65fc-492b-a83e-0f84c64259b6)
 
 ### Add Badges
 ```dart

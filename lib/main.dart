@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:smart_nav_bar/models/badge.dart';
 import 'package:smart_nav_bar/models/nav_item.dart';
+import 'package:smart_nav_bar/models/nav_style.dart';
 import 'package:smart_nav_bar/smart_bottom_nav.dart';
 
 void main() => runApp(const MyApp());
@@ -34,6 +35,7 @@ class _MyAppState extends State<MyApp> {
         bottomNavigationBar: SmartBottomNav(
           currentIndex: _currentIndex,
           items: _items,
+          style: SmartNavStyle.neonStyle,
           onTap: (index) => setState(() => _currentIndex = index),
         ),
       ),
