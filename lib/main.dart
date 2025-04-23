@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:smart_nav_bar/models/badge.dart';
 import 'package:smart_nav_bar/models/nav_item.dart';
 import 'package:smart_nav_bar/models/nav_style.dart';
 import 'package:smart_nav_bar/smart_bottom_nav.dart';
@@ -21,9 +20,9 @@ class _MyAppState extends State<MyApp> {
     SmartNavItem(iconPath: 'assets/request_icon.svg', label: 'Request'),
     SmartNavItem(iconPath: 'assets/returns_icon.svg', label: 'Returns'),
     SmartNavItem(
-        iconPath: 'assets/profile_icon.svg',
-        label: 'Profile',
-        badge: BadgeNavItem(count: 3)),
+      iconPath: 'assets/profile_icon.svg',
+      label: 'Profile',
+    ),
   ];
 
   @override
@@ -35,7 +34,7 @@ class _MyAppState extends State<MyApp> {
         bottomNavigationBar: SmartBottomNav(
           currentIndex: _currentIndex,
           items: _items,
-          style: SmartNavStyle.neonStyle,
+          style: SmartNavStyle.minimalStyle,
           onTap: (index) => setState(() => _currentIndex = index),
         ),
       ),

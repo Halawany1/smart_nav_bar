@@ -1,64 +1,42 @@
 import 'package:flutter/material.dart';
-import 'package:smart_nav_bar/models/badge.dart';
-import 'package:smart_nav_bar/smart_nav_bar.dart';
+import 'package:smart_nav_bar/models/nav_item.dart';
+import 'package:smart_nav_bar/models/nav_style.dart';
+import 'package:smart_nav_bar/smart_bottom_nav.dart';
 
-void main() {
-  runApp(const MyApp());
-}
+void main() => runApp(const SmartBottomNavExample());
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Smart Nav Bar Demo',
-      theme: ThemeData(primarySwatch: Colors.blue),
-      home: const NavBarExample(),
-    );
-  }
-}
-
-class NavBarExample extends StatefulWidget {
-  const NavBarExample({super.key});
+class SmartBottomNavExample extends StatefulWidget {
+  const SmartBottomNavExample({super.key});
 
   @override
-  State<NavBarExample> createState() => _NavBarExampleState();
+  State<SmartBottomNavExample> createState() => _SmartBottomNavExampletate();
 }
 
-class _NavBarExampleState extends State<NavBarExample> {
+class _SmartBottomNavExampletate extends State<SmartBottomNavExample> {
   int _currentIndex = 0;
-  final PageController _controller = PageController();
 
   final List<SmartNavItem> _items = const [
+    SmartNavItem(iconPath: 'assets/home_icon.svg', label: 'Home'),
+    SmartNavItem(iconPath: 'assets/request_icon.svg', label: 'Request'),
+    SmartNavItem(iconPath: 'assets/returns_icon.svg', label: 'Returns'),
     SmartNavItem(
-      iconPath: 'assets/home.svg',
-      label: 'Home',
-      badge: BadgeNavItem(count: 3),
-      screen: Center(child: Text('Home Screen')),
-    ),
-    SmartNavItem(
-      iconPath: 'assets/search.svg',
-      label: 'Search',
-      screen: Center(child: Text('Search Screen')),
-    ),
-    SmartNavItem(
-      iconPath: 'assets/profile.svg',
+      iconPath: 'assets/profile_icon.svg',
       label: 'Profile',
-      badge: BadgeNavItem(text: '!'),
-      screen: Center(child: Text('Profile Screen')),
     ),
   ];
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SmartBottomNav(
-        currentIndex: _currentIndex,
-        items: _items,
-        onTap: (index) => setState(() => _currentIndex = index),
-        withScreens: true,
-        pageController: _controller,
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(title: const Text('Custom Nav Bar Demo')),
+        body: Center(child: Text('Page ${_currentIndex + 1}')),
+        bottomNavigationBar: SmartBottomNav(
+          currentIndex: _currentIndex,
+          items: _items,
+          style: SmartNavStyle.minimalStyle,
+          onTap: (index) => setState(() => _currentIndex = index),
+        ),
       ),
     );
   }

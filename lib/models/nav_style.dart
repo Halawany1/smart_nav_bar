@@ -80,7 +80,7 @@ class SmartNavStyle {
   /// Features a dark background with bright neon accent colors and
   /// pronounced animation effects.
   static const SmartNavStyle neonStyle = SmartNavStyle(
-    backgroundColor: Color(0xFF0F0F0F),
+    backgroundColor: Color(0xFF101720),
     borderColor: Color(0xFF00FFAA),
     borderRadius: 18.0,
     margin: EdgeInsets.symmetric(horizontal: 20, vertical: 12),
@@ -190,7 +190,7 @@ class SmartNavStyle {
   ///
   /// Features no background or borders, with basic animations and hidden labels.
   static const SmartNavStyle minimalStyle = SmartNavStyle(
-    backgroundColor: Colors.transparent,
+    backgroundColor: Colors.white,
     borderColor: Colors.transparent,
     borderRadius: 0,
     margin: EdgeInsets.zero,
