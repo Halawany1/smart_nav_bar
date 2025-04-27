@@ -32,6 +32,7 @@ flutter pub get
 ![22 04 2025_16 27 37_REC-ezgif com-effects](https://github.com/user-attachments/assets/14679377-19a1-4494-b178-d42587ed1610) | SmartNavStyle()
 ![23 04 2025_12 57 32_REC-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/d3502110-0707-4d1d-8316-2731bc454ec6) | SmartNavStyle.neonStyle
 ![23 04 2025_12 58 40_REC-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/962d1a00-7d0c-462b-92ce-a604a584a934) | SmartNavStyle.colorfulStyle
+![23 04 2025_13 00 08_REC-ezgif com-video-to-gif-converter (1)](https://github.com/user-attachments/assets/bb4c7636-f5fa-4b2c-8f42-703fbb033bd9) | SmartNavStyle.gradientStyle
 ![23 04 2025_12 51 50_REC-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/4762e3f2-8b03-483f-bdf2-e54f94070932) | SmartNavStyle.minimalStyle
 ## 🛠 Basic Usage
 
