@@ -18,7 +18,7 @@ A beautifully animated and highly customizable bottom navigation bar for Flutter
 
 ```yaml
 dependencies:
-  smart_nav_bar: ^1.0.4+5
+  smart_nav_bar: ^1.0.4+6
 
 Then run:
 flutter pub get
