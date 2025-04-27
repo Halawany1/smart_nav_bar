@@ -4,6 +4,4 @@
 
 ### Changed
 - Updated readme file
-- add new styles to bottom nav bar 
-- remove two styles
-- can to make gradient color
+
