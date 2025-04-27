@@ -51,6 +51,7 @@ SmartBottomNav(
 )
 
 ```
+## 🛠 Customize Styles with copyWith
 
 ## 🛠 Customize Styles with copyWith
 
@@ -64,6 +65,7 @@ SmartBottomNav(
 );
 ```
 
+```
 ### Add Badges
 ```dart
 SmartNavItem(
