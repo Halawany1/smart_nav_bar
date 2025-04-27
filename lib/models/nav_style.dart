@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 
 /// A comprehensive style configuration class for custom navigation bars.
-///
 /// This class provides customizable styling options for navigation components,
 /// including colors, borders, typography, animations, and layout properties.
 /// It also includes several predefined styles for common design patterns.
 class SmartNavStyle {
   /// The background color of the navigation bar.
   final Color backgroundColor;
+
+  /// The background gradient of the navigation bar (nullable).
+  final Gradient? backgroundGradient;
 
   /// The border color of the navigation bar (nullable).
   final Color? borderColor;
@@ -49,10 +51,10 @@ class SmartNavStyle {
   final bool showLabel;
 
   /// Creates a [SmartNavStyle] with customizable properties.
-  ///
   /// All parameters have sensible defaults for a basic navigation bar style.
   const SmartNavStyle({
     this.backgroundColor = Colors.white,
+    this.backgroundGradient,
     this.borderColor,
     this.borderRadius = 20.0,
     this.margin = const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
@@ -76,9 +78,7 @@ class SmartNavStyle {
   });
 
   /// A neon-themed style with vibrant colors and elastic animations.
-  ///
-  /// Features a dark background with bright neon accent colors and
-  /// pronounced animation effects.
+  /// Features a dark background with bright neon accent colors and pronounced animation effects.
   static const SmartNavStyle neonStyle = SmartNavStyle(
     backgroundColor: Color(0xFF101720),
     borderColor: Color(0xFF00FFAA),
@@ -104,63 +104,7 @@ class SmartNavStyle {
     showLabel: true,
   );
 
-  /// A light-themed style with subtle colors and clean aesthetics.
-  ///
-  /// Uses a white background with blue accent colors and understated animations.
-  static const SmartNavStyle lightStyle = SmartNavStyle(
-    backgroundColor: Colors.white,
-    borderColor: Color(0xFFE0E0E0),
-    borderRadius: 16.0,
-    margin: EdgeInsets.symmetric(horizontal: 20, vertical: 15),
-    padding: EdgeInsets.all(5),
-    defaultActiveColor: Color(0xFF1A237E),
-    defaultInactiveColor: Colors.black54,
-    defaultActiveTextStyle: TextStyle(
-      fontSize: 12,
-      fontWeight: FontWeight.bold,
-    ),
-    defaultInactiveTextStyle: TextStyle(
-      fontSize: 12,
-      color: Color(0xFFCCCCCC),
-      fontWeight: FontWeight.w400,
-    ),
-    defaultIconSize: 24.0,
-    scaleFactor: 1.1,
-    animationCurve: Curves.easeOutQuad,
-    animationDuration: Duration(milliseconds: 300),
-    showLabel: true,
-  );
-
-  /// A dark-themed style with high contrast and modern aesthetics.
-  ///
-  /// Features a dark background with white accent colors and subtle animations.
-  static const SmartNavStyle darkStyle = SmartNavStyle(
-    backgroundColor: Color(0xFF121212),
-    borderColor: null,
-    borderRadius: 25.0,
-    margin: EdgeInsets.symmetric(horizontal: 20, vertical: 15),
-    padding: EdgeInsets.all(5),
-    defaultActiveColor: Colors.white,
-    defaultInactiveColor: Colors.white60,
-    defaultActiveTextStyle: TextStyle(
-      fontSize: 12,
-      fontWeight: FontWeight.w700,
-      color: Colors.white,
-    ),
-    defaultInactiveTextStyle: TextStyle(
-      fontSize: 12,
-      fontWeight: FontWeight.w400,
-      color: Color(0xFFCCCCCC),
-    ),
-    defaultIconSize: 24.0,
-    scaleFactor: 1.2,
-    animationCurve: Curves.easeOutQuad,
-    animationDuration: Duration(milliseconds: 300),
-    showLabel: true,
-  );
-
   /// A colorful style with vibrant hues and aquatic theme.
-  ///
   /// Uses light blue background with teal accent colors and standard animations.
   static const SmartNavStyle colorfulStyle = SmartNavStyle(
     backgroundColor: Color(0xFFE1F5FE),
@@ -187,7 +131,6 @@ class SmartNavStyle {
   );
 
   /// A minimal style with transparent background and simple elements.
-  ///
   /// Features no background or borders, with basic animations and hidden labels.
   static const SmartNavStyle minimalStyle = SmartNavStyle(
     backgroundColor: Colors.white,
@@ -213,12 +156,46 @@ class SmartNavStyle {
     showLabel: false,
   );
 
+  /// A gradient background style for the navigation bar with smooth animations.
+  static SmartNavStyle gradientStyle = SmartNavStyle(
+    backgroundGradient: const LinearGradient(
+      colors: [Colors.deepPurpleAccent, Colors.pinkAccent],
+      begin: Alignment.topLeft,
+      end: Alignment.bottomRight,
+      stops: [0.3, 1.0], // Adjusting stops for a smoother gradient transition
+    ),
+    backgroundColor: Colors.transparent, // Transparent to show gradient
+    borderColor: Colors.transparent,
+    borderRadius: 30.0, // Soft, rounded corners for a modern look
+    margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+    padding: const EdgeInsets.all(5),
+    defaultActiveColor: Colors.white,
+    defaultInactiveColor: Colors.grey[400]!,
+    defaultActiveTextStyle: const TextStyle(
+      fontSize: 14, // Slightly larger font for clarity
+      fontWeight: FontWeight.bold, // Bold text for active items
+      color: Colors.white,
+      letterSpacing: 0.5, // Small letter spacing for better readability
+    ),
+    defaultInactiveTextStyle: const TextStyle(
+      fontSize: 14, // Consistent size with active text
+      fontWeight: FontWeight.w400,
+      color: Color(0xFFCCCCCC),
+      letterSpacing: 0.3, // Small letter spacing for consistency
+    ),
+    defaultIconSize: 28.0, // Slightly larger icons for better visibility
+    scaleFactor: 1.2, // A bit more pronounced scale effect for active items
+    animationCurve: Curves.easeOut, // Smooth easing for fluid transitions
+    animationDuration: const Duration(
+        milliseconds: 400), // Slightly longer animation for smoother effect
+    showLabel: true,
+  );
+
   /// Creates a copy of this style with the given fields replaced.
-  ///
-  /// Returns a new [SmartNavStyle] instance where non-null parameters
-  /// replace the corresponding properties of the original style.
+  /// Returns a new [SmartNavStyle] instance where non-null parameters replace the corresponding properties of the original style.
   SmartNavStyle copyWith({
     Color? backgroundColor,
+    Gradient? backgroundGradient,
     Color? borderColor,
     double? borderRadius,
     EdgeInsets? margin,
@@ -235,6 +212,7 @@ class SmartNavStyle {
   }) {
     return SmartNavStyle(
       backgroundColor: backgroundColor ?? this.backgroundColor,
+      backgroundGradient: backgroundGradient ?? this.backgroundGradient,
       borderColor: borderColor ?? this.borderColor,
       borderRadius: borderRadius ?? this.borderRadius,
       margin: margin ?? this.margin,

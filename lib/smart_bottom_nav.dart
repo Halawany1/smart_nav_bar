@@ -3,8 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:smart_nav_bar/models/badge.dart';
 import 'package:smart_nav_bar/smart_nav_bar.dart';
 
-/// A custom bottom navigation bar widget that supports optional page view integration,
-/// animated icon scaling, and notification badges.
+/// A custom bottom navigation bar widget with gradient colors, animated icon scaling, and notification badges.
 class SmartBottomNav extends StatelessWidget {
   /// The currently selected index.
   final int currentIndex;
@@ -54,13 +53,14 @@ class SmartBottomNav extends StatelessWidget {
     );
   }
 
-  /// Builds the navigation bar container with background, border, and shadow styles.
+  /// Builds the navigation bar container with gradient background, border, and shadow styles.
   Widget _buildBottomNavBar() {
     return Container(
       margin: style.margin,
       padding: style.padding,
       decoration: BoxDecoration(
-        color: style.backgroundColor,
+        gradient: style.backgroundGradient,
+        color: style.backgroundGradient == null ? style.backgroundColor : null,
         border: style.borderColor != null
             ? Border.all(color: style.borderColor!)
             : null,

@@ -34,7 +34,7 @@ class _SmartBottomNavExampletate extends State<SmartBottomNavExample> {
         bottomNavigationBar: SmartBottomNav(
           currentIndex: _currentIndex,
           items: _items,
-          style: SmartNavStyle.minimalStyle,
+          style: SmartNavStyle.colorfulStyle,
           onTap: (index) => setState(() => _currentIndex = index),
         ),
       ),

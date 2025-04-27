@@ -34,7 +34,7 @@ class _MyAppState extends State<MyApp> {
         bottomNavigationBar: SmartBottomNav(
           currentIndex: _currentIndex,
           items: _items,
-          style: SmartNavStyle.minimalStyle,
+          style: SmartNavStyle.gradientStyle,
           onTap: (index) => setState(() => _currentIndex = index),
         ),
       ),

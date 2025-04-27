@@ -18,7 +18,7 @@ A beautifully animated and highly customizable bottom navigation bar for Flutter
 
 ```yaml
 dependencies:
-  smart_nav_bar: ^1.0.4+4
+  smart_nav_bar: ^1.0.4+5
 
 Then run:
 flutter pub get
@@ -32,8 +32,6 @@ flutter pub get
 ![22 04 2025_16 27 37_REC-ezgif com-effects](https://github.com/user-attachments/assets/14679377-19a1-4494-b178-d42587ed1610) | SmartNavStyle()
 ![23 04 2025_12 57 32_REC-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/d3502110-0707-4d1d-8316-2731bc454ec6) | SmartNavStyle.neonStyle
 ![23 04 2025_12 58 40_REC-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/962d1a00-7d0c-462b-92ce-a604a584a934) | SmartNavStyle.colorfulStyle
-![23 04 2025_13 00 08_REC-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/6e204d97-3103-438f-abe0-c6404d52c999) | SmartNavStyle.lightStyle
-![23 04 2025_12 59 23_REC-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/8286853f-8793-4a2a-b245-f3d7582db11a) | SmartNavStyle.darkStyle
 ![23 04 2025_12 51 50_REC-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/4762e3f2-8b03-483f-bdf2-e54f94070932) | SmartNavStyle.minimalStyle
 ## 🛠 Basic Usage
 
@@ -54,6 +52,17 @@ SmartBottomNav(
 
 ```
 
+## 🛠 Customize Styles with copyWith
+
+```dart
+ SmartNavStyle.neonStyle.copyWith(
+  backgroundColor: Colors.deepPurple,
+  borderColor: Colors.purpleAccent,
+  defaultActiveColor: Colors.amber,
+  showLabel: false,
+  //
+);
+```
 
 ### Add Badges
 ```dart
