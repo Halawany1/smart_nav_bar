@@ -62,7 +62,13 @@ SmartBottomNav(
   borderColor: Colors.purpleAccent,
   defaultActiveColor: Colors.amber,
   showLabel: false,
-  //
+  backgroundGradient: const LinearGradient(
+      colors: [Colors.deepPurpleAccent, Colors.pinkAccent],
+      begin: Alignment.topLeft,
+      end: Alignment.bottomRight,
+      stops: [0.3, 1.0], // Adjusting stops for a smoother gradient transition
+    ),
+  /////////
 );
 ```
 
